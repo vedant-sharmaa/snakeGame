@@ -15,11 +15,11 @@ GRAY = (192, 192, 192)
 BLACK = (0, 0, 0)
 
 # Load sound effects
-eat_sound = pygame.mixer.Sound("./sounds/hiss3-103123.mp3")    
-game_over_sound = pygame.mixer.Sound("./sounds/negative_beeps-6008.mp3")  
+eat_sound = pygame.mixer.Sound("./sounds/eat.mp3")    
+game_over_sound = pygame.mixer.Sound("./sounds/game_over.mp3")  
 
 # Load background music
-pygame.mixer.music.load("./sounds/primitive-snake-charmer-melody-104216.mp3")  
+pygame.mixer.music.load("./sounds/bg.mp3")  
 pygame.mixer.music.set_volume(0.3)
 
 mute_sound = False  # Variable to track the mute state
