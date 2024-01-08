@@ -15,11 +15,11 @@ GRAY = (192, 192, 192)
 BLACK = (0, 0, 0)
 
 # Load sound effects
-eat_sound = pygame.mixer.Sound("./sounds/hiss3-103123.mp3")    # Replace "eat.wav" with the path to your sound file
-game_over_sound = pygame.mixer.Sound("./sounds/negative_beeps-6008.mp3")  # Replace "game_over.wav" with the path to your sound file
+eat_sound = pygame.mixer.Sound("./sounds/hiss3-103123.mp3")    
+game_over_sound = pygame.mixer.Sound("./sounds/negative_beeps-6008.mp3")  
 
 # Load background music
-pygame.mixer.music.load("./sounds/primitive-snake-charmer-melody-104216.mp3")  # Replace "background_music.wav" with the path to your background music file
+pygame.mixer.music.load("./sounds/primitive-snake-charmer-melody-104216.mp3")  
 pygame.mixer.music.set_volume(0.3)
 
 mute_sound = False  # Variable to track the mute state
@@ -115,7 +115,7 @@ class Food:
         pygame.draw.ellipse(surface, self.color, food_rect)
         pygame.draw.ellipse(surface, BLACK, food_rect, 2)
 
-def draw_text(surface, text, size, x, y, color, align="center"):  # Default align is center
+def draw_text(surface, text, size, x, y, color, align="center"):  
     font = pygame.font.Font(None, size)
     text_surface = font.render(text, True, color)
     text_rect = text_surface.get_rect()
@@ -130,7 +130,7 @@ def draw_text(surface, text, size, x, y, color, align="center"):  # Default alig
     surface.blit(text_surface, text_rect)
 
 def start_menu(window):
-    global mute_sound  # Declare global variable to track mute state
+    global mute_sound  
     window.fill(GRAY)
     draw_text(window, "Snake Game", 60, WIDTH // 2, HEIGHT // 4, WHITE)
     draw_text(window, "Press Enter to Play", 30, WIDTH // 2, HEIGHT // 2 - 30, WHITE)
@@ -206,7 +206,7 @@ def game_over_menu(window, snake):
                     sys.exit()
 
 def game_loop():
-    global mute_sound  # Declare global variable to track mute state
+    global mute_sound  
     window = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Snake Game")
     clock = pygame.time.Clock()
